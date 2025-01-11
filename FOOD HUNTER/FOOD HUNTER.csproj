@@ -183,11 +183,14 @@
     <Content Include="assets\pages\widget\amchart\worldLow.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Images\logo1.png" />
     <Content Include="templates\css\bootstrap.css" />
     <Content Include="templates\css\font-awesome.min.css" />
     <Content Include="templates\css\responsive.css" />
     <Content Include="templates\css\style.css" />
+    <Content Include="templates\images\1.0.jpg" />
     <Content Include="templates\images\about-img.png" />
+    <Content Include="templates\images\abt.png" />
     <Content Include="templates\images\client1.jpg" />
     <Content Include="templates\images\client2.jpg" />
     <Content Include="templates\images\f1.png" />
@@ -202,12 +205,17 @@
     <Content Include="templates\images\favicon.png" />
     <Content Include="templates\images\hero-bg.jpg" />
     <Content Include="Images\login.jpg" />
+    <Content Include="templates\images\jvs.png" />
+    <Content Include="templates\images\mainimg.jpg" />
+    <Content Include="templates\images\mainpg.png" />
     <Content Include="templates\images\o1.jpg" />
     <Content Include="templates\images\o2.jpg" />
+    <Content Include="templates\images\sev-puri.jpg" />
     <Content Include="templates\js\bootstrap.js" />
     <Content Include="templates\js\custom.js" />
     <Content Include="templates\js\jquery-3.4.1.min.js" />
     <Content Include="user\about.aspx" />
+    <Content Include="user\cart.aspx" />
     <Content Include="user\contact.aspx" />
     <Content Include="user\default.aspx" />
     <Content Include="user\login.aspx" />
@@ -264,6 +272,13 @@
     </Compile>
     <Compile Include="user\about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

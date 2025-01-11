@@ -11,21 +11,21 @@
     <div class="row">
       <div class="col-md-6 ">
         <div class="img-box">
-          <img src="../templates/images/about-img.png" alt="">
+          <img src="../templates/images/abt.png" alt="">
         </div>
       </div>
       <div class="col-md-6">
         <div class="detail-box">
           <div class="heading_container">
             <h2>
-              We Are Feane
+              Welcome to Food Hunter
             </h2>
           </div>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-            are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-            the middle of text. All
+            
+              Embark on a culinary journey with Food Hunter, your one-stop destination for exploring the vibrant flavors of street food. Our mission is simple yet impactful: to connect you with the hidden gems of local street vendors, bringing their authentic and delicious creations right to your doorstep.
+              At Food Hunter, we believe in supporting small businesses while offering you an unforgettable gastronomic experience. Discover a diverse range of dishes, from savory snacks to delightful sweets, all made with love and care by passionate street food artisans.
+              Let’s hunt down the best street food together, one bite at a time!
           </p>
           <a href="">
             Read More

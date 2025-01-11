@@ -1,7 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderUserControl.ascx.cs" Inherits="FOOD_HUNTER.user.SliderUserControl" %>
 
-
-
 <section class="slider_section ">
   <div id="customCarousel1" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -11,16 +9,11 @@
             <div class="col-md-7 col-lg-6 ">
               <div class="detail-box">
                 <h1>
-                  Fast Food Restaurant
+                  FOOD HUNTER
                 </h1>
                 <p>
-                  Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    Welcome to Food Hunter, your gateway to the vibrant world of street food! We’re on a mission to bring the flavors of local vendors right to your doorstep, helping these small businesses thrive while you enjoy the most authentic and delicious bites from around the city. Discover hidden gems, support your community, and satisfy your cravings—all in one place. Let’s hunt down some amazing street food together!
                 </p>
-                <div class="btn-box">
-                  <a href="" class="btn1">
-                    Order Now
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -44,6 +37,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -65,6 +59,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -77,5 +72,4 @@
       </ol>
     </div>
   </div>
-
 </section>

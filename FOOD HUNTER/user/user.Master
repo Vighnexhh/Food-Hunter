@@ -16,7 +16,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<link rel="shortcut icon" href="../assets/images/FOOD HUNTER.png" type="">
+<link rel="shortcut icon" href="../assets/images/logo1.png" type="">
 
 <title> FOOD HUNTER </title>
 
@@ -58,7 +58,7 @@
         
   <div class="hero_area">
     <div class="bg-box">
-      <img src="../templates/images/hero-bg.jpg" alt="">
+      <img src="../templates/images/jvs.png" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -97,7 +97,7 @@
               <%--<a href="" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>--%>
-              <a class="cart_link" href="#">
+              <a class="cart_link" href="cart.aspx">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
