@@ -57,3 +57,4 @@ C:\Users\ADMIN\source\repos\FOOD HUNTER\FOOD HUNTER\obj\Debug\FOOD HUNTER.csproj
 C:\Users\ADMIN\source\repos\FOOD HUNTER\FOOD HUNTER\obj\Debug\FOOD HUNTER.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\FOOD HUNTER\FOOD HUNTER\obj\Debug\FOOD HUNTER.dll
 C:\Users\ADMIN\source\repos\FOOD HUNTER\FOOD HUNTER\obj\Debug\FOOD HUNTER.pdb
+C:\Users\ADMIN\source\repos\FOOD HUNTER\FOOD HUNTER\bin\itextsharp.dll

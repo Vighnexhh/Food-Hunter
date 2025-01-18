@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Download Invoice(Food Ordering)\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -184,6 +188,7 @@
     <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Images\logo1.png" />
+    <Content Include="itextsharp.dll" />
     <Content Include="templates\css\bootstrap.css" />
     <Content Include="templates\css\font-awesome.min.css" />
     <Content Include="templates\css\responsive.css" />

@@ -139,7 +139,7 @@ namespace FOOD_HUNTER.user
                 lblMsg.Visible = true;
                 lblMsg.Text = "Your Item Ordered Successfully";
                 lblMsg.CssClass = "alert alert-success";
-                Response.AddHeader("REFRESH", "1;URL=invoice.aspx");
+                Response.AddHeader("REFRESH", "1;URL=invoice.aspx?id=");
             }
             catch (Exception e)
             {
