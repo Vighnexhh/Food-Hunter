@@ -218,8 +218,10 @@
     <Content Include="user\cart.aspx" />
     <Content Include="user\contact.aspx" />
     <Content Include="user\default.aspx" />
+    <Content Include="user\invoice.aspx" />
     <Content Include="user\login.aspx" />
     <Content Include="user\menu.aspx" />
+    <Content Include="user\payment.aspx" />
     <Content Include="user\profile.aspx" />
     <Content Include="user\registration.aspx" />
     <Content Include="user\SliderUserControl.ascx" />
@@ -294,6 +296,13 @@
     <Compile Include="user\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\invoice.aspx.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\invoice.aspx.designer.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +316,13 @@
     </Compile>
     <Compile Include="user\menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>

@@ -21,6 +21,7 @@ namespace FOOD_HUNTER
     {
         SqlConnection con;
         SqlCommand cmd;
+        SqlDataAdapter sda;
         public static bool IsValidExtension(string fileName)
         {
             bool isValid = false;
@@ -55,7 +56,7 @@ namespace FOOD_HUNTER
         {
             bool isUpdated = false;
             con = new SqlConnection(Connection.GetConnectionString());
-            cmd = new SqlCommand("Cart_Crud", con);
+            cmd = new SqlCommand("Cartz_Crud", con);
             cmd.Parameters.AddWithValue("@Action", "UPDATE");
             cmd.Parameters.AddWithValue("@ProductId", productId);
             cmd.Parameters.AddWithValue("@Quantity", quantity);
@@ -77,6 +78,27 @@ namespace FOOD_HUNTER
                 con.Close();
             }
             return isUpdated;
+        }
+
+
+        public int cartCount(int userId)
+        {
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cartz_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "SELECT");
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt.Rows.Count;
+        }
+
+        public static string GetUniqueId()
+        {
+            Guid guid = Guid.NewGuid();
+            String uniqueId = guid.ToString();
+            return uniqueId;
         }
 
     }

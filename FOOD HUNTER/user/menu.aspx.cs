@@ -22,6 +22,7 @@ namespace FOOD_HUNTER.user
                 {
                 getCategories();
                 getProduct();
+                
                 }
         }
 
@@ -60,7 +61,7 @@ namespace FOOD_HUNTER.user
                 if(i == 0)
                 {
                     con = new SqlConnection(Connection.GetConnectionString());
-                    cmd = new SqlCommand("Cart_Crud", con);
+                    cmd = new SqlCommand("Cartz_Crud", con);
                     cmd.Parameters.AddWithValue("@Action", "INSERT");
                     cmd.Parameters.AddWithValue("@ProductId", e.CommandArgument);
                     cmd.Parameters.AddWithValue("@Quantity", 1);
@@ -70,20 +71,20 @@ namespace FOOD_HUNTER.user
                     {
                         con.Open();
                         cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
+                    }  
+                    catch(Exception ex)
                     {
-                        Response.Write("<script>alert('Error - " + ex.Message + " ');<script>");
+                        Response.Write("<script>alert('Error - " + ex.Message+ " ');<script>");
                     }
                     finally
                     { 
                       con.Close();
                     }
                 }
-                else
+                else 
                 {
                     Utils utils = new Utils();
-                    isCartItemUpdated= utils.updateCartQuantity(i + 1, Convert.ToInt32(e.CommandArgument),
+                    isCartItemUpdated = utils.updateCartQuantity(i + 1, Convert.ToInt32(e.CommandArgument),
                         Convert.ToInt32(Session["userId"]));
                 }
                 lblMsg.Visible = true;
@@ -95,12 +96,13 @@ namespace FOOD_HUNTER.user
             {
                 Response.Redirect("login.aspx");
             }
+           
         }
 
         int isItemExistInCart(int productId)
         {
             con = new SqlConnection(Connection.GetConnectionString());
-            cmd = new SqlCommand("Cart_Crud", con);
+            cmd = new SqlCommand("Cartz_Crud", con);
             cmd.Parameters.AddWithValue("@Action", "GETBYID");
             cmd.Parameters.AddWithValue("@ProductId", productId);
             cmd.Parameters.AddWithValue("@UserId", Session["userId"]);
@@ -109,17 +111,12 @@ namespace FOOD_HUNTER.user
             dt = new DataTable();
             sda.Fill(dt);
             int quantity = 0;
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 quantity = Convert.ToInt32(dt.Rows[0]["Quantity"]);
             }
             return quantity;
         }
-
-        //public string LowerCase(Object obj)
-        //{
-        //    return obj.ToString().ToLower();
-        //}
 
     }
 }

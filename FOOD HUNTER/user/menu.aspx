@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user/user.Master" AutoEventWireup="true" CodeBehind="menu.aspx.cs" Inherits="FOOD_HUNTER.user.menu" %>
+
 <%@ Import Namespace="FOOD_HUNTER" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -7,47 +8,47 @@
 
     <!-- food section -->
 
-<section class="food_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-        <div class="align-self-end">
-            <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
-        </div>
-      <h2>
-        Our Menu
+    <section class="food_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <div class="align-self-end">
+                    <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
+                </div>
+                <h2>Our Menu
       </h2>
-    </div>
+            </div>
 
-    <ul class="filters_menu">
-      <li class="active" data-filter="*">All</li>
-        <asp:Repeater ID="rCategory" runat="server" >
-            <ItemTemplate>
-    <li data-filter=".<%# Regex.Replace(Eval("Name").ToString().ToLower(),@"\s+","") %>"><%# Eval("Name") %></li>
-</ItemTemplate>
-        </asp:Repeater>
-        
-    </ul>
+            <ul class="filters_menu">
+                <li class="active" data-filter="*" data-id="0">All</li>
+                <asp:Repeater ID="rCategory" runat="server">
+                    <ItemTemplate>
+                        <li data-filter=".<%# Regex.Replace(Eval("Name").ToString().ToLower(),@"\s+","") %>" data-id="<%# Eval("CategoryId") %>">
+                            <%# Eval("Name") %></li>
+                    </ItemTemplate>
+                </asp:Repeater>
 
-    <div class="filters-content">
-      <div class="row grid">
-        <asp:Repeater ID="rProducts" runat="server" OnItemCommand="rProducts_ItemCommand">
-            <ItemTemplate>
-                <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("CategoryName").ToString().ToLower(),@"\s+","") %>">
-  <div class="box">
-    <div>
-      <div class="img-box">
-        <img src="<%# Utils.GetImageUrl(Eval ("ImageUrl")) %>" alt="">
-      </div>
-      <div class="detail-box">
-        <h5> <%# Eval("Name") %></h5>
-        <p>
-             <%# Eval("Description") %>        </p>
-        <div class="options">
-          <h6>
-            Rs. <%# Eval("Price") %>
+            </ul>
+
+            <div class="filters-content">
+                <div class="row grid">
+                    <asp:Repeater ID="rProducts" runat="server" OnItemCommand="rProducts_ItemCommand">
+                        <ItemTemplate>
+                            <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("CategoryName").ToString().ToLower(),@"\s+","") %>">
+                                <div class="box">
+                                    <div>
+                                        <div class="img-box">
+                                            <img src="<%# Utils.GetImageUrl(Eval ("ImageUrl")) %>" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <h5><%# Eval("Name") %></h5>
+                                            <p>
+                                                <%# Eval("Description") %>
+                                            </p>
+                                            <div class="options">
+                                                <h6>Rs. <%# Eval("Price") %>
           </h6>
-          <asp:LinkButton runat="server" ID="lbAddToCart" CommandName="addToCart" 
-              CommandArgument='<%# Eval("ProductId") %>'>
+                                                <asp:LinkButton runat="server" ID="lbAddToCart" CommandName="addToCart"
+                                                    CommandArgument='<%# Eval("ProductId") %>'>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
               <g>
                 <g>
@@ -101,20 +102,20 @@
               </g>
             </svg>
           </asp:LinkButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>        
-            </ItemTemplate>
-        </asp:Repeater>
-        
-      </div>
-    </div>
-    
-  </div>
-</section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
 
-<!-- end food section -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- end food section -->
 
 </asp:Content>
