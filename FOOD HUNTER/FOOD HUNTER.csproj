@@ -72,7 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\category.aspx" />
+    <Content Include="admin\contacts.aspx" />
     <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\orderstatus.aspx" />
     <Content Include="admin\product.aspx" />
     <Content Include="admin\users.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
@@ -247,12 +249,26 @@
     <Compile Include="admin\category.aspx.designer.cs">
       <DependentUpon>category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\contacts.aspx.cs">
+      <DependentUpon>contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\contacts.aspx.designer.cs">
+      <DependentUpon>contacts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\orderstatus.aspx.cs">
+      <DependentUpon>orderstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\orderstatus.aspx.designer.cs">
+      <DependentUpon>orderstatus.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>

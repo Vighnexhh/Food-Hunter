@@ -194,7 +194,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">PRODUCT DELIVERY STATUS</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#)">
+                                        <a href="orderstatus.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Update Status</span>
                                             <span class="pcoded-mcaret"></span>
@@ -213,10 +213,10 @@
 
                                 </ul>
 
-                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">USERS FEEDBACK</div>
+                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">USERS FEEDBACK/OUERY</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#)">
+                                        <a href="contacts.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Contact</span>
                                             <span class="pcoded-mcaret"></span>
