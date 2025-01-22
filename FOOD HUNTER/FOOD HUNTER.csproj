@@ -76,6 +76,7 @@
     <Content Include="admin\dashboard.aspx" />
     <Content Include="admin\orderstatus.aspx" />
     <Content Include="admin\product.aspx" />
+    <Content Include="admin\report.aspx" />
     <Content Include="admin\users.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
     <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
@@ -276,6 +277,13 @@
     </Compile>
     <Compile Include="admin\product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\users.aspx.cs">
       <DependentUpon>users.aspx</DependentUpon>

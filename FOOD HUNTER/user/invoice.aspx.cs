@@ -41,7 +41,7 @@ namespace FOOD_HUNTER.user
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("Invoices", con);
             cmd.Parameters.AddWithValue("@Action", "INVOICBYID");
-            //cmd.Parameters.AddWithValue("@PaymentId", Convert.ToUInt32(Request.QueryString["id"]));
+            //cmd.Parameters.AddWithValue("@PaymentId", Convert.ToInt32(Request.QueryString["id"]));
             cmd.Parameters.AddWithValue("@UserId", Session["userID"]);
             cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);

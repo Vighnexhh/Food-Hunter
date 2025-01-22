@@ -19,7 +19,7 @@
     <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="CodedThemes">
     <!-- Favicon icon -->
-    <link rel="icon" href="../assets/images/FOOD HUNTER.png" type="image/x-icon">
+    <link rel="icon" href="../images/logo1.png" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <!-- Required Fremwork -->
@@ -110,7 +110,8 @@
                                 <i class="ti-menu"></i>
                             </a>
                             <a href="index.html">
-                                <img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />
+                                  <!--<img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />-->
+                                <h3 class="pl-2 pt-2">ADMIN PANEL</h3>
                             </a>
                             <a class="mobile-options">
                                 <i class="ti-more"></i>
@@ -132,8 +133,8 @@
                             <ul class="nav-right">
                                 <li class="user-profile header-notification">
                                     <a href="#!">
-                                        <img src="../assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                        <span>ADMIN</span>
+                                      <!--  <img src="../assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image"> -->
+                                        <span>FH-ADMIN</span>
                                         <i class="ti-angle-down"></i>
                                     </a>
                                     <ul class="show-notification profile-notification">
@@ -227,7 +228,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">REPORTS</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#)">
+                                        <a href="report.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Sells Report</span>
                                             <span class="pcoded-mcaret"></span>
