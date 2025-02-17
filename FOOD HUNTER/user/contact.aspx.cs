@@ -16,8 +16,46 @@ namespace FOOD_HUNTER.user
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                LoadUserLocation();
+            }
         }
+
+        private void LoadUserLocation()
+            {
+                try
+                {
+                    con = new SqlConnection(Connection.GetConnectionString());
+                    cmd = new SqlCommand("SELECT Latitude, Longitude FROM Users WHERE UserID = @UserID", con);
+                    cmd.Parameters.AddWithValue("@UserID", Session["UserID"]); // Assuming you store the UserID in Session
+
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    double latitude = 19.0760; // Default Mumbai latitude
+                    double longitude = 72.8777; // Default Mumbai longitude
+
+                    if (reader.Read())
+                    {
+                        latitude = Convert.ToDouble(reader["Latitude"]);
+                        longitude = Convert.ToDouble(reader["Longitude"]);
+                    }
+
+                    reader.Close();
+                    con.Close();
+
+                    // Pass coordinates to JavaScript
+                    string script = $"initLeafletMap({latitude}, {longitude});";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "initMap", script, true);
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('Error loading map: " + ex.Message + "');</script>");
+                }
+            }
+
+        
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {

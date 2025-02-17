@@ -154,8 +154,8 @@ namespace FOOD_HUNTER.admin
                 imgProduct.Width = 200;
                 hdnId.Value = dt.Rows[0]["ProductId"].ToString();
                 btnAddOrUpdate.Text = "Update";
-                LinkButton lnkButton = e.Item.FindControl("lnkEdit") as LinkButton;
-                btnAddOrUpdate.CssClass = "badge badge-warning";
+                LinkButton lnkEdit = e.Item.FindControl("lnkEdit") as LinkButton;
+                lnkEdit.CssClass = "badge badge-warning";
             }
             else if (e.CommandName == "delete")
             {

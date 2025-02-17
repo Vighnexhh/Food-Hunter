@@ -2,32 +2,57 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
+    <!-- Hide message after 5 seconds -->
     <script>
         window.onload = function () {
             var seconds = 5;
             setTimeout(function () {
-                document.getElementById("<%=lblMsg.ClientID%>").style.display = "none";
-    }, seconds * 1000);
+                var lblMsg = document.getElementById("<%=lblMsg.ClientID%>");
+                if (lblMsg) lblMsg.style.display = "none";
+            }, seconds * 1000);
         };
     </script>
 
+    <!-- Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        function initLeafletMap(latitude, longitude) {
+            var userLocation = [latitude, longitude]; // Coordinates from the database
+
+            // Initialize map
+            var map = L.map('leafletMap').setView(userLocation, 12);
+
+            // Add OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add marker for user location
+            L.marker(userLocation).addTo(map)
+                .bindPopup("User's Registered Location")
+                .openPopup();
+        }
+    </script>
+
 </asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!-- book section -->
+    <!-- Contact Form Section -->
     <section class="book_section layout_padding">
         <div class="container">
             <div class="heading_container">
                 <div class="align-self-end">
                     <asp:Label ID="lblMsg" runat="server"></asp:Label>
                 </div>
-                <h2>Send Your Query
-                </h2>
+                <h2>Send Your Query</h2>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-
                         <div>
                             <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Your Name"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="Name is Required" ControlToValidate="txtName" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
@@ -50,13 +75,15 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="map_container ">
-                        <div id="googleMap"></div>
-                    </div>
+                    <!-- Google Map Container -->
+                    <div class="map_container">
+    <div id="leafletMap" style="width: 100%; height: 400px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);"></div>
+</div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- end book section -->
+    <!-- End Contact Section -->
 
 </asp:Content>

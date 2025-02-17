@@ -14,8 +14,59 @@
                 <div class="align-self-end">
                     <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
                 </div>
-                <h2>Our Menu
+                <h2 style="margin-bottom:50px;">Our Menu
       </h2>
+                <div class="search-container">
+    <div class="search-wrapper">
+        <asp:TextBox ID="txtSearch" runat="server" CssClass="search-box" placeholder="Search for food..."></asp:TextBox>
+        <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="search-btn" OnClick="btnSearch_Click" />
+    </div>
+</div>
+
+<style>
+    .search-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .search-wrapper {
+        position: relative;
+        width: 280px;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 10px 60px 10px 15px; /* Space for button */
+        border: 1px solid #333;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    .search-box:focus {
+        outline: none;
+        border-color: #000;
+    }
+
+    .search-btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #333;
+        padding: 5px;
+    }
+
+    .search-btn:hover {
+        color: #000;
+    }
+</style>
+
+
             </div>
 
             <ul class="filters_menu">
@@ -33,7 +84,7 @@
                 <div class="row grid">
                     <asp:Repeater ID="rProducts" runat="server" OnItemCommand="rProducts_ItemCommand">
                         <ItemTemplate>
-                            <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("CategoryName").ToString().ToLower(),@"\s+","") %>">
+                            <div class="col-sm-6 col-lg-4 all <%# Eval("CategoryName").ToString().ToLower().Replace(" ", "") %>">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">

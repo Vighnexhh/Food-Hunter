@@ -154,6 +154,8 @@
     <Content Include="assets\js\script.js" />
     <Content Include="assets\js\script.min.js" />
     <Content Include="assets\js\SmoothScroll.js" />
+    <Content Include="assets\leaflet\leaflet.css" />
+    <Content Include="assets\leaflet\leaflet.js" />
     <Content Include="assets\pages\accordion\accordion.js" />
     <Content Include="assets\pages\accordion\accordion.min.js" />
     <Content Include="assets\pages\chart\morris\morris-custom-chart.js" />
@@ -199,6 +201,12 @@
     <Content Include="templates\images\1.0.jpg" />
     <Content Include="templates\images\about-img.png" />
     <Content Include="templates\images\abt.png" />
+    <Content Include="templates\images\bg1.png" />
+    <Content Include="templates\images\bg2.png" />
+    <Content Include="templates\images\bg3.png" />
+    <Content Include="templates\images\bg4.png" />
+    <Content Include="templates\images\bg5.png" />
+    <Content Include="templates\images\bg6.jpg" />
     <Content Include="templates\images\client1.jpg" />
     <Content Include="templates\images\client2.jpg" />
     <Content Include="templates\images\f1.png" />
@@ -211,9 +219,13 @@
     <Content Include="templates\images\f8.png" />
     <Content Include="templates\images\f9.png" />
     <Content Include="templates\images\favicon.png" />
+    <Content Include="templates\images\final1.png" />
+    <Content Include="templates\images\finals.png" />
     <Content Include="templates\images\hero-bg.jpg" />
     <Content Include="Images\login.jpg" />
     <Content Include="templates\images\jvs.png" />
+    <Content Include="templates\images\last.png" />
+    <Content Include="templates\images\last2.png" />
     <Content Include="templates\images\mainimg.jpg" />
     <Content Include="templates\images\mainpg.png" />
     <Content Include="templates\images\o1.jpg" />

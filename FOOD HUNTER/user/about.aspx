@@ -5,8 +5,8 @@
 
     <!-- about section -->
 
-<section class="about_section layout_padding">
-  <div class="container  ">
+<section class="about_section layout_padding"  style="background-color:#222">
+  <div class="container ">
 
     <div class="row">
       <div class="col-md-6 ">
@@ -27,9 +27,7 @@
               At Food Hunter, we believe in supporting small businesses while offering you an unforgettable gastronomic experience. Discover a diverse range of dishes, from savory snacks to delightful sweets, all made with love and care by passionate street food artisans.
               Let’s hunt down the best street food together, one bite at a time!
           </p>
-          <a href="">
-            Read More
-          </a>
+         
         </div>
       </div>
     </div>

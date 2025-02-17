@@ -139,7 +139,7 @@ namespace FOOD_HUNTER.user
                         else
                         {
                             isTrue = false;
-                            pName = productName.Text.ToString();
+                            //pName = productName.Text.ToString();
                             break;
                         }
                     }

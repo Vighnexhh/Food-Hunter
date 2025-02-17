@@ -99,6 +99,36 @@ namespace FOOD_HUNTER.user
            
         }
 
+        private void getProduct(string searchQuery = "")
+        {
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Product_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "ACTIVEPROD");
+            cmd.Parameters.AddWithValue("@SearchQuery", searchQuery); // Pass search term
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            sda.Fill(dt);
+
+            if (!dt.Columns.Contains("CategoryName"))
+            {
+                throw new Exception("Column 'CategoryName' not found in the dataset.");
+            }
+
+            rProducts.DataSource = dt;
+            rProducts.DataBind();
+        }
+
+       protected void btnSearch_Click(object sender, EventArgs e)
+{
+    string searchQuery = txtSearch.Text.Trim();
+    getProduct(searchQuery);
+    txtSearch.Text = ""; // Clear search bar after search
+}
+
+
+
+
         int isItemExistInCart(int productId)
         {
             con = new SqlConnection(Connection.GetConnectionString());
